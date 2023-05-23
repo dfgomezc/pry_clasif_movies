@@ -3,7 +3,7 @@
 from flask import Flask
 from flask_restx import Api, Resource, fields
 import joblib
-from model_deployment_v2 import predict_price
+from model_deployment import predict_category
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -44,7 +44,7 @@ class ClassMovies(Resource):
         args = parser.parse_args()
         
         return {
-         "result":  predict_price(args.Plot) 
+         "result":  predict_category(args.Plot) 
         }, 200
     
     

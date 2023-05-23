@@ -34,7 +34,7 @@ def transformar(Plot):
     return transformado
 
 
-def predict_price(Plot):
+def predict_category(Plot):
     
     X_test_transformed = transformar(Plot)
     model = load('../OUTPUT/MODELS/modelo_base.bin')
@@ -46,7 +46,6 @@ def predict_price(Plot):
     
     return dictionary
 
-Plot = "asdaASD SDFSDF sdfgsdf FDGDFG dfgdfg opdfgdfgljl SDFGDFG"
 
 
 if __name__ == "__main__":
@@ -57,10 +56,10 @@ if __name__ == "__main__":
     else:
 
         Plot = int(sys.argv[1])
-        p1 = predict_price(Plot)
+        p1 = predict_category(Plot)
         
         print(f"{Plot}")
-        print('Probabilidad de pertencer a un género ', p1)
+        print('Probabilidad de pertencer a una categoria ', p1)
         
         
         
