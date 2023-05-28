@@ -51,4 +51,29 @@ cd tu_repositorio
 pip install -r requirements.txt
 ```
 
-4. Explore y preprocese los datos:
+4. Cambiar el directorio a la carpeta SCRPITS:
+
+```cmd
+cd SCRIPTS
+```
+
+5. Correr la aplicacón api.py
+
+```cmd
+python api.py
+```
+
+6. Si el SO es Windows, para poder acceder a la aplicación remotamente es necesario apagar el firewall público y privado. De lo contrario no se permiten conexiones externas a la máquina. Se puede hacer manualmente o a través de la ventan de comandos:
+
+```cmd
+netsh advfirewall set allprofiles state off
+```
+
+7. Explore y preprocese los datos:
+
+Pruebe la aplicación haciendo requests con la trama de las películas que desee. Recuerde usar la dirección IP provista y el puerto 5000. 
+
+```cmd
+IP: 20.62.126.193
+Port: 5000
+```
